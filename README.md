@@ -15,9 +15,7 @@
 
 #
 
-This repo contains an ablation model of [Rendezvous](https://github.com/CAMMA-public/rendezvous) network, known as `Attention Tripnet`. 
-<br />
-[![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) [![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433)
+This repo contains an ablation model of [Rendezvous](https://github.com/CAMMA-public/rendezvous) network, known as `Attention Tripnet`. <br /> [![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) [![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433)
 
 
 <br />
