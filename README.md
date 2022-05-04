@@ -190,7 +190,7 @@ The experimental setup of the published model is contained in the paper.
 ## Testing
 
 ```
-python3 run.py -e --dataset_variant=cholect45-crossval --kfold 3 --batch 32 --version=1 --test_ckpt="/path/to/model-k3/weights" --data_dir="/path/to/dataset"
+python3 run.py -e --data_dir="/path/to/dataset" --dataset_variant=cholect45-crossval --kfold 3 --batch 32 --version=1 --test_ckpt="/path/to/model-k3/weights"
 ```
 
 <br />
