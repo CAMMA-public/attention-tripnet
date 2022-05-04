@@ -6,9 +6,7 @@
 </div>
 <br/>
 
-![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white)
-![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white)
-[![](https://img.shields.io/badge/WORK```IN-PROGRESS-blue?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
+![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) [![](https://img.shields.io/badge/WORK```IN-PROGRESS-blue?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
 
 # **Attention Tripnet**: Exploiting attention mechanisms for the recognition of surgical action triplets in endoscopic videos
 
@@ -19,40 +17,36 @@
 
 This repo contains an ablation model of [Rendezvous](https://github.com/CAMMA-public/rendezvous) network, known as `Attention Tripnet`. 
 <br />
-[![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
-[![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433)
+[![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) [![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433)
 
 
 <br />
 
 
 # Introduction
-Recognising action as a triplet of subject, verb, and object provides truly fine-grained and comprehensive information on surgical activities. In the natural vision, it model as <subject, verb, object> representing the Human Object Interaction (HOI). In Surgical Computer Vision, the information is presented as <instrument, verb, target>.
-Triplet recognition involves simultaneous recognition of all three triplet components and correctly establishing the data association between them.
+Recognising action as a triplet of subject, verb, and object provides truly fine-grained and comprehensive information on surgical activities. In the natural vision, it model as <subject, verb, object> representing the Human Object Interaction (HOI). In Surgical Computer Vision, the information is presented as <instrument, verb, target>. Triplet recognition involves simultaneous recognition of all three triplet components and correctly establishing the data association between them.
+
 A lot of efforts has been made to recognize surgical triplets directly from videos. The predominant ones include Tripnet and Rendezvous models leveraging class activations and attention mechanisms.
 
-<br>
+<br />
 
 <img src="files/attentiontripnet.png" width="98%" > 
 
 *Fig 1: Architecture of Attention Tripnet.*
 
-The first effort at exploiting attention mechanisms in this Rendezvous led to the development of a Class Activation Guided Attention Mechanism (CAGAM) to better detect the verb and target components of the triplet, which are instrument-centric.
-CAGAM is a form of spatial attention mechanism that propagates attention from a known to an unknown context features thereby enhancing the unknown context for relevant pattern discovery. Usually the known context feature is a class activation map (CAM).
-In this work, CAGAM explicitly uses tool type and location information to highlight discriminative features for verbs and targets respectively.
-Integrating CAGAM in the state-of-the-art Tripnet model results in a new model that is now known as Attention Tripnet with improved performance.
+The first effort at exploiting attention mechanisms in this Rendezvous led to the development of a Class Activation Guided Attention Mechanism (CAGAM) to better detect the verb and target components of the triplet, which are instrument-centric. CAGAM is a form of spatial attention mechanism that propagates attention from a known to an unknown context features thereby enhancing the unknown context for relevant pattern discovery. Usually the known context feature is a class activation map (CAM). In this work, CAGAM explicitly uses tool type and location information to highlight discriminative features for verbs and targets respectively. Integrating CAGAM in the state-of-the-art Tripnet model results in a new model that is now known as Attention Tripnet with improved performance.
 
-<br>
+<br />
 
 <img src="files/cagam.png" width="98%" >
 
 *Fig 2: Overview of CAGAM.*
 
 
-<br>
+<br />
 
 
-------
+
 # Model Overview
 
 
@@ -64,15 +58,16 @@ The Attention-Tripnet model is composed of:
 * Decoder: for triplet assocaition due to multi-instances
     * 3D interaction space (3Dis): for learning to associate instrument-verb-target using a learning projection and for final triplet classification.
 
-<br>
+<br />
 
 
 We hope this repo will help researches/engineers in the development of surgical action recognition systems. For algorithm development, we provide training data, baseline models and evaluation methods to make a level playground. For application usage, we also provide a small video demo that takes raw videos as input without any bells and whistles.
 
-<br>
+<br />
 
-------
+
 # Performance
+
 ## Results Table
 
 
@@ -91,11 +86,13 @@ Usefulness of CAGAM is demonstrated at the second phase of the video:
 
 Available on Youtube.
 
-<br>
+<br />
 
-------
+
 # Installation
+
 ## Requirements
+
 The model depends on the following libraries:
 1. sklearn
 2. PIL
@@ -113,12 +110,14 @@ The model depends on the following libraries:
 <br />
 
 ## System Requirements:
+
 The code has been test on Linux operating system. It runs on both CPU and GPU.
 Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed to run in Windows or Mac OS.
 
 <br />
 
 ## Quick Start
+
 * clone the git repository: ``` git clone https://github.com/CAMMA-public/rendezvous.git ```
 * install all the required libraries according to chosen your framework.
 * download the dataset
@@ -126,10 +125,9 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 * train
 * evaluate
 
-<br>
+<br />
 
 
-------
 
 # Dataset Zoo
 
@@ -137,9 +135,10 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 * CholecT50
 * [Dataset splits](https://arxiv.org/abs/2204.05235)
 
-<br>
+<br />
 
 ## Data Preparation
+
 * All frames are resized to 256 x 448 during training and evaluation.
 * Image data are mean normalized.
 * The dataset variants are tagged in this code as follows: 
@@ -148,10 +147,11 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
    - cholect45-crossval = CholecT45 with official cross-val split **(currently public released)**.
    - cholect50-crossval = CholecT50 with official cross-val split.
 
-<br>
+<br />
 
-------
+
 ## Evaluation Metrics
+
 The *ivtmetrics* computes AP for triplet recognition. It also support the evaluation of the recognition of the triplet components.
 ```
 pip install ivtmetrics
@@ -162,15 +162,17 @@ conda install -c nwoye ivtmetrics
 ```
 Usage guide is found on [pypi.org](https://pypi.org/project/ivtmetrics/).
 
-<br>
+<br />
 
-------
+
 # Running the Model
+
 The code can be run in a trianing mode (`-t`) or testing mode (`-e`)  or both (`-t -e`) if you want to evaluate at the end of training :
 
-<br>
+<br />
 
 ## Training on CholecT45/CholecT50 Dataset
+
 Simple training on CholecT50 dataset:
 ```
 python run.py -t  --data_dir="/path/to/dataset" --dataset_variant=cholect50 --version=1
@@ -185,7 +187,7 @@ python3 run.py -t -e  --data_dir="/path/to/dataset" --dataset_variant=cholect45-
 All the flags can been seen in the `run.py` file.
 The experimental setup of the published model is contained in the paper.
 
-<br>
+<br />
 
 ## Testing
 
@@ -193,22 +195,24 @@ The experimental setup of the published model is contained in the paper.
 python3 run.py -e --dataset_variant=cholect45-crossval --kfold 3 --batch 32 --version=1 --test_ckpt="/path/to/model-k3/weights" --data_dir="/path/to/dataset"
 ```
 
-<br>
+<br />
 
 ## Training on Custom Dataset
+
 Adding custom datasets is quite simple, what you need to do are:
 - organize your annotation files in the same format as in [CholecT45](https://github.com/CAMMA-public/cholect45) dataset. 
 - final model layers can be modified to suit your task by changing the class-size (num_tool_classes, num_verb_classes, num_target_classes, num_triplet_classes) in the argparse.
 
-<br>
+<br />
 
-------
+
 # Model Zoo
 
 * **N.B.** Download links to models' weights will not be provided until after the CholecTriplet2022 challenge.
 
 
 ## PyTorch
+
 | Network   | Base      | Resolution | Dataset   | Data split  |  Link             |
 ------------|-----------|------------|-----------|-------------|-------------------|
 | Attention Tripnet| ResNet-18 | Low        | CholecT50 | RDV         |   [Google] [Baidu] |
@@ -227,10 +231,8 @@ Adding custom datasets is quite simple, what you need to do are:
 
 <br />
 
-
-<br>
-
 ## TensorFlow v2
+
 | Network   | Base      | Resolution | Dataset   | Data split    | Link             |
 ------------|-----------|------------|-----------|---------------|------------------|
 | Attention Tripnet| ResNet-18 | High       | CholecT50 | RDV           |   [Google] [Baidu] |
@@ -240,10 +242,9 @@ Adding custom datasets is quite simple, what you need to do are:
 
 Model weights are released periodically because some training are in progress.
 
-<br><br>
+<br /><br />
 
 
-------------
 # License
 
 
@@ -251,40 +252,31 @@ This code, models, and datasets are available for **non-commercial scientific re
 By downloading and using this code you agree to the terms in the [LICENSE](LICENSE). Third-party codes are subject to their respective licenses.
 
 
-<br>
+<br />
 
 
-------
 
 # Related Resources
 <b>
    
 -  CholecT45 / CholecT50 Datasets
-   [![Download dataset](https://img.shields.io/badge/download-camma-yellowgreen)](http://camma.u-strasbg.fr/datasets) 
-   [![GitHub](https://img.shields.io/badge/github-CholecT45-blue)](https://github.com/CAMMA-public/cholect45)   
+   [![Download dataset](https://img.shields.io/badge/download-camma-yellowgreen)](http://camma.u-strasbg.fr/datasets)    [![GitHub](https://img.shields.io/badge/github-CholecT45-blue)](https://github.com/CAMMA-public/cholect45)   
 -  Offical Dataset Splits 
    [![Official dataset split](https://img.shields.io/badge/arxiv-2204.05235-red)](https://arxiv.org/abs/2204.05235)
 -  Tripnet 
-   [![ArXiv paper](https://img.shields.io/badge/arxiv-2007.05405-red)](https://arxiv.org/abs/2007.05405) 
-   [![GitHub](https://img.shields.io/badge/github-tripnet-blue)](https://github.com/CAMMA-public/tripnet)   
+   [![ArXiv paper](https://img.shields.io/badge/arxiv-2007.05405-red)](https://arxiv.org/abs/2007.05405)    [![GitHub](https://img.shields.io/badge/github-tripnet-blue)](https://github.com/CAMMA-public/tripnet)   
 -  Rendezvous 
-    [![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223) 
-    [![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433)
-   [![GitHub](https://img.shields.io/badge/github-rendezvous-blue)](https://github.com/CAMMA-public/rendezvous) 
+    [![Read on ArXiv](https://img.shields.io/badge/arxiv-2109.03223-red)](https://arxiv.org/abs/2109.03223)     [![Journal Publication](https://img.shields.io/badge/Elsevier-Medical%20Image%20Analysis-orange)](https://doi.org/10.1016/j.media.2022.102433) [![GitHub](https://img.shields.io/badge/github-rendezvous-blue)](https://github.com/CAMMA-public/rendezvous) 
 -  CholecTriplet2021 Challenge
-   [![Challenge website](https://img.shields.io/badge/website-2021.cholectriplet-lightgreen)](https://cholectriplet2021.grand-challenge.org) 
-   [![ArXiv paper](https://img.shields.io/badge/arxiv-2204.04746-red)](https://arxiv.org/abs/2204.04746) 
-   [![GitHub](https://img.shields.io/badge/github-2021.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022) 
+   [![Challenge website](https://img.shields.io/badge/website-2021.cholectriplet-lightgreen)](https://cholectriplet2021.grand-challenge.org)    [![ArXiv paper](https://img.shields.io/badge/arxiv-2204.04746-red)](https://arxiv.org/abs/2204.04746)    [![GitHub](https://img.shields.io/badge/github-2021.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022) 
 -  CholecTriplet2022 Challenge
-   [![Challenge website](https://img.shields.io/badge/website-2022.cholectriplet-lightgreen)](https://cholectriplet2022.grand-challenge.org) 
-   [![GitHub](https://img.shields.io/badge/github-2022.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022)
+   [![Challenge website](https://img.shields.io/badge/website-2022.cholectriplet-lightgreen)](https://cholectriplet2022.grand-challenge.org)    [![GitHub](https://img.shields.io/badge/github-2022.cholectriplet-blue)](https://github.com/CAMMA-public/cholectriplet2022)
  
 </b>
 
-<br>
+<br />
 
 
-------
 
 # Citation
 If you find this repo useful in your project or research, please consider citing the relevant publications:
