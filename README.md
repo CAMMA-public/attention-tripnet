@@ -130,7 +130,7 @@ Equivalence of basic OS commands such as _unzip, cd, wget_, etc. will be needed 
 # Dataset Zoo
 
 * [CholecT45](https://github.com/CAMMA-public/cholect45) 
-* CholecT50
+* [CholecT50](https://github.com/CAMMA-public/cholect50) 
 * [Dataset splits](https://arxiv.org/abs/2204.05235)
 
 <br />
@@ -213,9 +213,19 @@ Adding custom datasets is quite simple, what you need to do are:
 
 | Network   | Base      | Resolution | Dataset   | Data split  |  Link             |
 ------------|-----------|------------|-----------|-------------|-------------------|
-| Attention Tripnet| ResNet-18 | Low        | CholecT50 | RDV         |   [Google] [Baidu] |
-| Attention Tripnet| ResNet-18 | High       | CholecT50 | RDV         |   [Google] [Baidu] |
-| Attention Tripnet| ResNet-18 | Low        | CholecT50 | Challenge   |   [Google] [Baidu] |
+| Attention Tripnet   | ResNet-18 | Low        | CholecT50 | RDV         |   [Download] |
+| Attention Tripnet   | ResNet-18 | Low        | CholecT50 | Challenge   |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontriplet_cholect50-challenge_k0_batchnorm_lowres.pth.pth) |
+| Attention Tripnet   | ResNet-18 | High        | CholecT50 | Challenge  |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect50_challenge_k0.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT50 | crossval k1 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect50_crossval_k1.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT50 | crossval k2 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect50_crossval_k2.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT50 | crossval k3 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect50_crossval_k3.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT50 | crossval k4 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect50_crossval_k4.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT50 | crossval k5 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect50_crossval_k5.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT45 | crossval k1 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect45_crossval_k1.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT45 | crossval k2 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect45_crossval_k2.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT45 | crossval k3 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect45_crossval_k3.pth.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT45 | crossval k4 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect45_crossval_k4.pth) |
+| Attention Tripnet| ResNet-18 | Low        | CholecT45 | crossval k5 |   [Download](https://s3.unistra.fr/camma_public/github/attentiontripnet/attentiontripnet_cholect50_batchnorm_lowres.pth) |
 ------------
 
 <br />
@@ -224,8 +234,8 @@ Adding custom datasets is quite simple, what you need to do are:
 
 | Network   | Base      | Resolution | Dataset   | Data split    | Link             |
 ------------|-----------|------------|-----------|---------------|------------------|
-| Attention Tripnet| ResNet-18 | High       | CholecT50 | RDV           |  [Google] [Baidu] |
-| Attention Tripnet| ResNet-18 | High       | CholecT50 | Challenge     |  [Google] [Baidu] |
+| Attention Tripnet| ResNet-18 | High       | CholecT50 | RDV           |  [Download] |
+| Attention Tripnet| ResNet-18 | High       | CholecT50 | Challenge     |  [Download] |
 
 <br />
 
@@ -233,9 +243,9 @@ Adding custom datasets is quite simple, what you need to do are:
 
 | Network   | Base      | Resolution | Dataset   | Data split    | Link             |
 ------------|-----------|------------|-----------|---------------|------------------|
-| Attention Tripnet| ResNet-18 | High       | CholecT50 | RDV           |   [Google] [Baidu] |
-| Attention Tripnet| ResNet-18 | Low        | CholecT50 | RDV           |   [Google] [Baidu] |
-| Attention Tripnet| ResNet-18 | High       | CholecT50 | Challenge     |   [Google] [Baidu] |
+| Attention Tripnet| ResNet-18 | High       | CholecT50 | RDV           |   [Download] |
+| Attention Tripnet| ResNet-18 | Low        | CholecT50 | RDV           |   [Download] |
+| Attention Tripnet| ResNet-18 | High       | CholecT50 | Challenge     |   [Download] |
 ------------
 
 Model weights are released periodically because some training are in progress.
