@@ -9,11 +9,12 @@
 ![PyTorch](https://img.shields.io/badge/PyTorch-%23EE4C2C.svg?style=for-the-badge&logo=PyTorch&logoColor=white) ![TensorFlow](https://img.shields.io/badge/TensorFlow-%23FF6F00.svg?style=for-the-badge&logo=TensorFlow&logoColor=white) [![](https://img.shields.io/badge/WORK```IN-PROGRESS-blue?style=for-the-badge)](https://hamzamohdzubair.github.io/redant/)
 
 # **Attention Tripnet**: Exploiting attention mechanisms for the recognition of surgical action triplets in endoscopic videos
+<i>C.I. Nwoye and N. Padoy</i>
 
 ###  News
 - [ **17/09/2025** ]: Check out our [CAMMA Dataset Overlaps](https://github.com/CAMMA-public/camma_dataset_overlaps) repository for an analysis of video overlaps across Cholec80, CholecT50, and Endoscapes to ensure fair dataset splits.
 
-<i>C.I. Nwoye and N. Padoy</i>
+
 
 #
 
