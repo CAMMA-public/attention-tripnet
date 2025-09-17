@@ -10,6 +10,8 @@
 
 # **Attention Tripnet**: Exploiting attention mechanisms for the recognition of surgical action triplets in endoscopic videos
 
+###  News
+- [ **17/09/2025** ]: Check out our [CAMMA Dataset Overlaps](https://github.com/CAMMA-public/camma_dataset_overlaps) repository for an analysis of video overlaps across Cholec80, CholecT50, and Endoscapes to ensure fair dataset splits.
 
 <i>C.I. Nwoye and N. Padoy</i>
 
